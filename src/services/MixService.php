@@ -106,7 +106,7 @@ class MixService extends Component
             $file = $manifest[$fileKey];
         }
 
-        return '/' . implode('/', array_filter([
+        return Craft::getAlias('@web') . '/' . implode('/', array_filter([
             $this->assetPath,
             ltrim($file, '/')
         ]));
